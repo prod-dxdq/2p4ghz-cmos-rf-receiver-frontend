@@ -1,0 +1,17 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\willi\OneDrive\Documents\rf_receiver\frontend\4_VCO\vco.net
+Start Time: Fri May  8 23:39:11 2026
+solver = Normal
+Maximum thread count: 24
+tnom = 27
+temp = 27
+method = trap
+Compress1stOrder = true
+Compress2ndOrder = true
+Per .tran options, skipping operating point for transient analysis.
+Total elapsed time: 40.586 seconds.
+
+Files loaded:
+C:\Users\willi\OneDrive\Documents\rf_receiver\frontend\4_VCO\vco.net
+C:\Users\willi\AppData\Local\LTspice\lib\cmp\standard.mos
+

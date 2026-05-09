@@ -1,0 +1,21 @@
+* WORKING starter LC VCO netlist - use this to verify the circuit first
+VDD vdd 0 1.8
+VCTRL vc 0 0.9
+
+L1 vdd out_1 2n
+L2 vdd out_2 2n
+C1 out_1 out_2 1p
+C2 out_1 vc 0.5p
+C3 vc out_2 0.5p
+
+* Tail current sink: current flows from tail to ground
+IBIAS tail 0 DC 1m
+
+M1 out_1 out_2 tail tail NMOS_RF W=100u L=180n
+M2 out_2 out_1 tail tail NMOS_RF W=100u L=180n
+
+.model NMOS_RF NMOS LEVEL=1 VTO=0.35 KP=5m LAMBDA=0.05
+.ic V(out_1)=0.95 V(out_2)=0.85
+.tran 0 1u 0 1p startup
+
+.end
